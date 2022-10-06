@@ -78,26 +78,26 @@
 
 <!--    对话框部分-->
     <div class="mdui-dialog" id="buyNatVpsDialog">
-        <div class="mdui-dialog-title">创建订单</div>
+        <div class="mdui-dialog-title">Create Order</div>
         <div class="mdui-dialog-content">
-            产品编号：<span id="prod_name">VPS Xeon-E5 Z</span><br>
-            购买时长：
+            Product NO：<span id="prod_name">VPS Xeon-E5 Z</span><br>
+            Duration：
             <label class="mdui-radio price-item">
                 <input type="radio" name="durationradio" value="1" checked/>
                 <i class="mdui-radio-icon"></i>
                 <img id="price_pic_mon" class="price-pic" src="images/mc/icon/diamond.png" alt="钻石">
                 <span id="order_price_month">114514</span>
-                一个月
+                One Month
             </label>
             <label class="mdui-radio price-item">
                 <input type="radio" name="durationradio" value="2" />
                 <i class="mdui-radio-icon"></i>
                 <img id="price_pic_sea" class="price-pic" src="images/mc/icon/diamond.png" alt="钻石">
                 <span id="order_price_season">114514</span>
-                一季度
+                One Season
             </label>
             <br>
-            操作系统：(部署后可自行更换安装光盘：Ubuntu,Debian,Deepin,UOS,Fedora等)
+            OS：(You can install CD Rom after deployed：Ubuntu,Debian,Deepin,UOS,Fedora.. etc)
             <br>
             <label>
                 <select class="mdui-select">
@@ -105,14 +105,14 @@
                         WindowsServer 2019
                     </option>
                     <option value="centos7" name="ostype">
-                        CentOS 7.9
+                        CentOS 7.3
                     </option>
                 </select>
             </label>
         </div>
         <div class="mdui-dialog-actions">
-            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
-            <button onclick="createNewOrder()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>确定</button>
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>Cancle</button>
+            <button onclick="createNewOrder()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>Confirm</button>
         </div>
     </div>
 
