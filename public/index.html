@@ -2,9 +2,131 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Minecraft Shop</title>
+    <link href="css/mdui.css" rel="stylesheet">
+    <link href="css/shop.css" rel="stylesheet">
+    <link href="images/mc/icon/WanderingTraderFace.webp" rel="shortcut icon"/>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
-<body>
+<body class="mdui-appbar mdui-theme-primary-light-blue mdui-theme-accent-pink">
+
+<header id="header" class="mdui-appbar mdui-appbar-fixed mdui-shadow-0">
+    <div class="mdui-toolbar">
+        <span class="mdui-btn mdui-btn-icon">
+            <i class="mdui-icon material-icons">shopping_cart</i>
+        </span>
+        <a href="javascript:" class="mdui-typo-title" id="subTitle">Minecraft Shop</a>
+        <span onclick="toBackend()"
+             mdui-tooltip="{content: '进入后台', position: 'bottom'}"
+             class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white mdui-float-right"
+             style="position: absolute; right: 55px"
+        >
+            <i class="mdui-icon material-icons">folder_shared</i>
+        </span>
+        <span onclick="toggleNightMode()"
+             mdui-tooltip="{content: '日夜模式', position: 'bottom'}"
+             class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white mdui-float-right"
+             style="position: absolute;right: 5px"
+        >
+            <i class="mdui-icon material-icons">&#xe3a9;</i>
+        </span>
+
+    </div>
+</header>
+
+<div id="mainContent">
+
+    <div class="bg-title-area mdui-valign ">
+        <div class="bg-title-bg">
+            <div class="bg-title-text">
+                Minecraft Shop
+            </div>
+        </div>
+    </div>
+
+    <div class="mdui-container">
+        <div class="product-type">
+            <div class="mdui-chip">
+            <span class="mdui-chip-icon mdui-color-theme">
+                <i class="mdui-icon material-icons">star_border</i>
+            </span>
+<!--                <span class="mdui-chip-title" mdui-tooltip="{content: '点我查看服务器类型介绍', position: 'top'}">-->
+<!--                    <a href="https://dabaiyun.net/index.php/archives/208/" target="_blank">NAT游戏服务器</a>-->
+<!--                </span>-->
+            </div>
+        </div>
+        <div id="product-list-natvps" class="mdui-row product-list">
+
+            <div v-for="prod in list">
+                <natvpscard v-bind:prod="prod"></natvpscard>
+            </div>
+
+        </div>
+    </div>
+
+    <img
+            class="alex"
+            src="images/mc/img/alex.webp"
+            alt=""
+    >
+    <img
+            class="player"
+            src="images/mc/img/player_run.png"
+            alt=""
+    >
+
+<!--    对话框部分-->
+    <div class="mdui-dialog" id="buyNatVpsDialog">
+        <div class="mdui-dialog-title">创建订单</div>
+        <div class="mdui-dialog-content">
+            产品编号：<span id="prod_name">VPS Xeon-E5 Z</span><br>
+            购买时长：
+            <label class="mdui-radio price-item">
+                <input type="radio" name="durationradio" value="1" checked/>
+                <i class="mdui-radio-icon"></i>
+                <img id="price_pic_mon" class="price-pic" src="images/mc/icon/diamond.png" alt="钻石">
+                <span id="order_price_month">114514</span>
+                一个月
+            </label>
+            <label class="mdui-radio price-item">
+                <input type="radio" name="durationradio" value="2" />
+                <i class="mdui-radio-icon"></i>
+                <img id="price_pic_sea" class="price-pic" src="images/mc/icon/diamond.png" alt="钻石">
+                <span id="order_price_season">114514</span>
+                一季度
+            </label>
+            <br>
+            操作系统：(部署后可自行更换安装光盘：Ubuntu,Debian,Deepin,UOS,Fedora等)
+            <br>
+            <label>
+                <select class="mdui-select">
+                    <option value="win2019" name="ostype" selected>
+                        WindowsServer 2019
+                    </option>
+                    <option value="centos7" name="ostype">
+                        CentOS 7.9
+                    </option>
+                </select>
+            </label>
+        </div>
+        <div class="mdui-dialog-actions">
+            <button class="mdui-btn mdui-ripple" mdui-dialog-close>取消</button>
+            <button onclick="createNewOrder()" class="mdui-btn mdui-ripple" mdui-dialog-confirm>确定</button>
+        </div>
+    </div>
+
+</div>
 
 </body>
+<script src="js/jquery-3.6.0.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script src="js/vue.global.js"></script>
+<script src="js/mdui.js"></script>
+<script src="js/common.js"></script>
+<script src="js/shop.js"></script>
+<script>
+    getNATVPSProdList();
+</script>
+
 </html>

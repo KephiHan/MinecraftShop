@@ -1,0 +1,144 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="404"/>
+    <title>您没有权限访问此页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            outline: none;
+            font-family: \5FAE\8F6F\96C5\9ED1, 宋体,serif;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            -khtml-user-select: none;
+            user-select: none;
+            cursor: default;
+            font-weight: lighter;
+        }
+        .center {
+            margin: 0 auto;
+        }
+        .whole {
+            width: 100%;
+            height: 100%;
+            line-height: 100%;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: -1000;
+            overflow: hidden;
+        }
+        .whole img {
+            width: 100%;
+            height: 100%;
+        }
+        .b {
+            width: 100%;
+            text-align: center;
+            height: 400px;
+            position: absolute;
+            top: 50%;
+            margin-top: -230px
+        }
+        .a a {
+            display: block;
+            float: left;
+            width: 150px;
+            height: 50px;
+            background: #fff;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            border-radius: 25px;
+            color: #333
+        }
+        .a a:hover {
+            color: #000;
+            box-shadow: #fff 0 0 20px
+        }
+        p {
+            color: #fff;
+            margin-top: 40px;
+            font-size: 24px;
+        }
+        #num {
+            margin: 0 5px;
+            font-weight: bold;
+        }
+        button {
+            margin: 30px 20px;
+            padding: 15px 20px;
+            border-radius: 10px;
+            border: 2px solid;
+            font: 16px 'Open Sans', sans-serif;
+            text-transform: uppercase;
+            background: none;
+            outline: none;
+            cursor: pointer;
+            -webkit-transition: all .5s;
+            transition: all .5s;
+            font-family: 微软雅黑,serif;
+        }
+        /* btn-1 */
+        .btn-1 {
+            color: #A3F7BF;
+            border-color: #A3F7BF;
+            background: -webkit-linear-gradient(left, #a3f7bf, #a3f7bf) no-repeat;
+            background: linear-gradient(to right, #a3f7bf, #a3f7bf) no-repeat;
+            background-size: 0% 100%;
+        }
+        .btn-1:hover {
+            background-size: 100% 100%;
+            color: #27323A;
+        }
+        body{
+            background-image: url("images/mc/bg/header-bg-main-caves.webp");
+            background-position: center top;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+        }
+    </style>
+
+    <script type="text/javascript">
+        var num = 10;
+
+        function redirect() {
+            num--;
+            document.getElementById("num").innerHTML = num;
+            if (num < 0) {
+                document.getElementById("num").innerHTML = 0;
+                location.href = "/login.html";
+            }
+        }
+
+        setInterval("redirect()", 1000);
+    </script>
+
+</head>
+
+<body onLoad="redirect();">
+<!--<div class="whole">-->
+<!--    <img src="images/mc/bg/header-bg-main-caves.webp"/>-->
+<!--</div>-->
+<div class="b">
+    <div>
+        <p style="font-size: 720%">403</p>
+    </div>
+    <p>
+        抱歉，您没有权限访问此页面<br>
+        如果您确定网址未输入错误，可以尝试登录访问！<br>
+        <span id="num"></span>秒后将自动跳转到登入页面<br>
+
+        <a href="/login.html">
+            <button class="btn-1">登入</button>
+        </a>
+
+
+    </p>
+
+</div>
+
+</body>
+</html>

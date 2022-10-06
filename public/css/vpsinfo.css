@@ -1,0 +1,185 @@
+.summaryinfo{
+    height: 400px;
+}
+
+.summaryinfo-harf{
+    height: 196px;
+}
+
+.summaryinfo-powerstat{
+    display: flex;
+}
+
+.summaryinfo-statu-icon{
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 8px;
+    margin-top: 4px;
+}
+
+.summaryinfo-statu-text{
+    font-size: 14px;
+}
+
+.summaryinfo-statu-run{
+    background: #12F842FF;
+}
+
+.summaryinfo-statu-stop{
+    background: #9d9d9d;
+}
+
+.subinfo{
+    height: 120px;
+}
+
+.subinfo-icon{
+    height: 60%;
+    /*width: 80%;*/
+}
+
+.connection-info{
+    width: 90%;
+    margin: auto;
+    padding-bottom: 20px;
+}
+
+.connection-info-item{
+    /*width: 100%;*/
+    margin-left: 5%;
+}
+
+
+.mdui-card{
+    margin-top: 8px;
+}
+
+.vpsinfo-content-item{
+    display: flex;
+    margin-left: 5%;
+    /*position: absolute;*/
+    /*margin: auto;*/
+}
+
+.vpsinfo-content-item-title{
+    padding: 0 8px;
+    width: 20%;
+}
+
+.vpsinfo-content-item-text{
+    padding: 0 8px;
+}
+
+.vpsinfo-content-item-content{
+    /*display: flex;*/
+}
+
+.vpsinfo-grapics{
+    float: right;
+    margin-right: 10%;
+    /*margin-bottom: 10%;*/
+}
+
+.vpsinfo-grapics-desc{
+    font-size: small;
+    margin-left: 10%;
+    color: rgb(151,151,151);
+}
+
+.vpsinfo-vncbtn{
+    cursor: pointer;
+}
+
+/*环形图*/
+
+.con {
+    position:relative;
+    display:inline-block;
+    height:100px;
+    width:100px;
+}
+
+.percent-circle {
+    position:absolute;
+    height:100%;
+    background:#00ccf6;
+    overflow: hidden;
+}
+
+.percent-circle-right {
+    right:0;
+    width:50px;
+    border-radius: 0 100px 100px 0/0 100px 100px 0;
+}
+
+.percent-circle-right .right-content{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform-origin:left center;
+    transform: rotate(0deg);
+    border-radius: 0 100px 100px 0/0 100px 100px 0;
+    background:#bbb;
+}
+
+.percent-circle-left {
+    width:50px;
+    border-radius: 100px 0 0 100px/100px 0 0 100px;
+}
+
+.percent-circle-left .left-content {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    transform-origin:right center;
+    transform: rotate(0deg);
+    border-radius: 50px 0 0 50px/50px 0 0 100px;
+    background:#bbb;
+}
+
+.text-circle {
+    position: absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height:80%;
+    width:80%;
+    left:10%;
+    top:10%;
+    border-radius:100%;
+    background:#fff;
+    color:#000;
+}
+
+.leftmenu-pic{
+    height: 40px;
+    width: 40px;
+    margin-top: -5px;
+}
+
+.price-line{
+    display: inline-flex;
+    margin-top: 10px;
+}
+
+.price-pic{
+    width: 30px;
+    height: 30px;
+    margin-left: -15px;
+    margin-bottom: -5px;
+}
+
+.renewal_link{
+    color: #0D47A1;
+}
+
+.renewal_link:hover{
+    cursor: pointer;
+    color: #00ACC1;
+    font-size: larger;
+}

@@ -1,0 +1,36 @@
+.vpslist-vpscard{
+    margin-top: 8px;
+}
+
+.vpslist-statu{
+    display: flex;
+    font-size: smaller;
+    padding: 10px;
+}
+
+.vpslist-statu-icon{
+    width: 15px;
+    height: 15px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    border-radius: 50%;
+    margin-right: 8px;
+}
+
+.vpslist-statu-text{
+    font-size: 14px;
+}
+
+.vpslist-statu-run{
+    background: #12F842FF;
+}
+
+.vpslist-statu-stop{
+    background: #9d9d9d;
+}
+
+.leftmenu-pic{
+    height: 40px;
+    width: 40px;
+    margin-top: -5px;
+}

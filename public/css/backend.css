@@ -1,0 +1,147 @@
+.link {
+    color: blue;
+    text-decoration:none
+}
+#mainContent, #noteContent {
+    position: relative;
+    top: 0px
+}
+#title,#content {
+    cursor: text;
+}
+@keyframes skeleton-load {
+    0% {
+        background-position: 0rem;
+    }
+    100% {
+        background-position: 10000rem;
+    }
+}
+.texto {
+    width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+#menu .mdui-list-item,
+.mdui-collapse-item-header {
+    border-radius: 0px 50px 50px 0px;
+}
+
+#categorys .mdui-list-item,
+.mdui-collapse-item-header {
+    border-radius: 0px 50px 50px 0px;
+}
+
+ul .mdui-list-item {
+    border-radius: 10px;
+}
+
+.mdui-dialog {
+    border-radius: 7px;
+}
+
+.mdui-btn {
+    border-radius: 5px;
+}
+
+.mdui-appbar {
+    box-shadow: 0 1px 6px 0 rgba(32, 33, 36, .28);
+}
+
+#menu .mdui-list-item-content {
+    font-size: unset
+}
+
+#categorys .mdui-list-item-content {
+    font-size: unset
+}
+
+.mdui-card {
+    margin-bottom:10px;
+}
+.picture {
+    overflow-x: scroll;
+    width: 100%;
+    white-space: nowrap;
+}
+.pic {
+    width:70%;
+    height:70%;
+}
+
+.mainiframe{
+    width:100%;
+    height:1200px;
+}
+
+.dby-title-username{
+    margin: 30px;
+}
+
+.dby-userheadimg{
+    width:90px;
+    height:60px;
+    margin-bottom: 30px;
+}
+
+.sp {
+    width: 32px;
+    height: 32px;
+    clear: both;
+    margin: auto;
+}
+
+/* Spinner LoadBar */
+.sp-loadbar {
+    width: 50px;
+    height: 18px;
+    border: 1px #000 solid;
+    border-radius: 4px;
+    background: linear-gradient(-60deg, transparent 0%, transparent 50%, #000 50%, #000 75%, transparent 75%, transparent);
+    background-size: 20px 30px;
+    background-position: 0px 0px;
+    -webkit-animation: spLoadBar 0.8s infinite linear;
+    animation: spLoadBar 0.8s infinite linear;
+}
+
+@-webkit-keyframes spLoadBar {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -20px 0px;
+    }
+}
+@keyframes spLoadBar {
+    from {
+        background-position: 0px 0px;
+    }
+    to {
+        background-position: -20px 0px;
+    }
+}
+
+.loading{
+    display: flex;
+    position: absolute;
+}
+
+.leftmenu-pic{
+    height: 40px;
+    width: 40px;
+    margin-top: -5px;
+}
+
+.price-line{
+    display: inline-flex;
+    margin-top: 5px;
+    margin-left: -5px;
+}
+
+.price-pic{
+    width: 30px;
+    height: 30px;
+    margin-top: -5px;
+}
